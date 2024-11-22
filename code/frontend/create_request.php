@@ -30,8 +30,8 @@
 <?php               } 
                 }?>
             </select>
-            <label for="colaborador">Colaborador:</label>
-            <select name="colaborador">
+            <label for="funcionario">Colaborador:</label>
+            <select name="funcionario">
                 <option value="null">Selecione uma Opção</option>
                 <?php if($result_colaborador -> num_rows > 0) {
                     while($row_colaborador = $result_colaborador->fetch_assoc()) { ?>
@@ -53,7 +53,7 @@
                 <option value="finalizada">Finalizado</option>
             </select>
             <label for="data">Data de Abertura:</label>
-            <input type="date">
+            <input type="date" name="data">
         </div>
         <button>Enviar</button>
     </form>
