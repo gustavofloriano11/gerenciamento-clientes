@@ -26,7 +26,7 @@
                 <option value="null">Selecione uma Opção</option>
                 <?php if($result_cliente -> num_rows > 0) {
                     while($row_cliente = $result_cliente->fetch_assoc()) { ?>
-                        <option value="<?php echo $row_cliente['id'] ?>"><?php echo $row_cliente['nome']; ?></option>
+                        <option value="<?php echo $row_cliente['id'] ?>"><?php echo $row_cliente['nome_cliente']; ?></option>
 <?php               } 
                 }?>
             </select>
@@ -35,7 +35,7 @@
                 <option value="null">Selecione uma Opção</option>
                 <?php if($result_colaborador -> num_rows > 0) {
                     while($row_colaborador = $result_colaborador->fetch_assoc()) { ?>
-                        <option value="<?php echo $row_colaborador['id'] ?>"><?php echo $row_colaborador['nome']; ?></option>
+                        <option value="<?php echo $row_colaborador['id'] ?>"><?php echo $row_colaborador['nome_funcionario']; ?></option>
 <?php               } 
                 }?>
             </select>

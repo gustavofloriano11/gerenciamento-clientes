@@ -10,7 +10,7 @@
         $status = $_POST['status'];
         $data = $_POST['data'];
         
-        $query = "INSERT INTO solicitacao (id_cliente, id_funcionario, urgencia, descricao, status_gerenciamento, data_abertura)
+        $query = "INSERT INTO solicitacao (id_cliente, id_funcionario, urgencia, descricao, status_solicitacao, data_abertura)
         VALUES ('$id_cliente', '$id_colaborador', '$urgencia', '$problema', '$status', '$data')";
 
         $result = $conn->query($query);

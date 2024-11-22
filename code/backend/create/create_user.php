@@ -8,7 +8,7 @@
         $telefone = $_POST['telefone'];
         $CPF = $_POST['CPF'];
 
-        $query = "INSERT INTO cliente (nome, email, telefone, CPF)
+        $query = "INSERT INTO cliente (nome_cliente, email, telefone, CPF)
         VALUES ('$name', '$email', '$telefone', '$CPF')";
 
         $result = $conn->query($query);
