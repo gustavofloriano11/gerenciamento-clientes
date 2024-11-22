@@ -2,12 +2,12 @@
 
     include "../backend/database/db.php";
 
-    $query_solicitacao = "SELECT * FROM solicitacao INNER JOIN cliente
+    $query = "SELECT * FROM solicitacao INNER JOIN cliente
     ON id_cliente = cliente.id
     INNER JOIN funcionario
     ON id_funcionario = funcionario.id";
 
-    $result_solicitacao = $conn->query($query_solicitacao)
+    $result = $conn->query($query)
 
 
 
@@ -24,7 +24,7 @@
     <h3>Solicitações Abertas:</h3>
     <table border="1">
         <?php
-        if($result_solicitacao -> num_rows > 0){ ?>
+        if($result -> num_rows > 0){ ?>
             <tr>
                 <th>Nome do Cliente:</th>
                 <th>Nome do Funcionário:</th>
@@ -32,16 +32,18 @@
                 <th>Status:</th>
                 <th>Urgência:</th>
                 <th>Data de Abertura:</th>
+                <th>Ações:</th>
             </tr>
         <?php 
-            while($row_solicitacao = $result_solicitacao->fetch_assoc()){ ?>
+            while($row = $result->fetch_assoc()){ ?>
                 <tr>
-                    <td><?php echo $row_solicitacao['nome_cliente']?></td>
-                    <td><?php echo $row_solicitacao['nome_funcionario']?></td>
-                    <td><?php echo $row_solicitacao['descricao']?></td>
-                    <td><?php echo $row_solicitacao['status_solicitacao']?></td>
-                    <td><?php echo $row_solicitacao['urgencia']?></td>
-                    <td><?php echo $row_solicitacao['data_abertura']?></td>
+                    <td><?php echo $row['nome_cliente']?></td>
+                    <td><?php echo $row['nome_funcionario']?></td>
+                    <td><?php echo $row['descricao']?></td>
+                    <td><?php echo $row['status_solicitacao']?></td>
+                    <td><?php echo $row['urgencia']?></td>
+                    <td><?php echo $row['data_abertura']?></td>
+                    <td><a href="update_request.php?id=<?php echo $row['id']?>">Editar</a> | <a href="delete_request.php">Excluir</a></td>
                 </tr>
                 <?php
             }
