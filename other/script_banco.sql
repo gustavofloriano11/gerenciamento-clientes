@@ -4,7 +4,7 @@ CREATE DATABASE gerenciamento_clientes;
 
 USE gerenciamento_clientes;
 
-CREATE TABLE clientes(
+CREATE TABLE cliente(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -26,5 +26,8 @@ CREATE TABLE solicitacao(
     urgencia VARCHAR(5) NOT NULL,
     descricao TEXT NOT NULL,
     status_gerenciamento VARCHAR(12) NOT NULL,
-    data_abertura DATE
+    data_abertura DATE,
+    FOREIGN KEY (id_cliente) REFERENCES cliente (id),
+    FOREIGN KEY (id_funcionario) REFERENCES funcionario (id)
+    
 );
