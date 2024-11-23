@@ -22,9 +22,9 @@
 </head>
 <body>
     <h3>Solicitações Abertas:</h3>
-    <table border="1">
         <?php
         if($result -> num_rows > 0){ ?>
+        <table border="1">
             <tr>
                 <th>Nome do Cliente:</th>
                 <th>Nome do Funcionário:</th>
@@ -43,7 +43,7 @@
                     <td><?php echo $row['status_solicitacao']?></td>
                     <td><?php echo $row['urgencia']?></td>
                     <td><?php echo $row['data_abertura']?></td>
-                    <td><a href="update_request.php?id=<?php echo $row['id']?>">Editar</a> | <a href="delete_request.php">Excluir</a></td>
+                    <td><a href="update_request.php?id=<?php echo $row['id_solicitacao']?>">Editar</a> | <a href="delete_request.php">Excluir</a></td>
                 </tr>
                 <?php
             }

@@ -48,9 +48,9 @@
             </select>
             <label for="status">Status:</label>
             <select name="status">
-                <option value="pendente">Pendente</option>
-                <option value="andamento">Em Andamento</option>
-                <option value="finalizada">Finalizado</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Em Andamento">Em Andamento</option>
+                <option value="Finalizada">Finalizado</option>
             </select>
             <label for="data">Data de Abertura:</label>
             <input type="date" name="data">
