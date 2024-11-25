@@ -43,13 +43,18 @@
                     <td><?php echo $row['status_solicitacao']?></td>
                     <td><?php echo $row['urgencia']?></td>
                     <td><?php echo $row['data_abertura']?></td>
-                    <td><a href="update_request.php?id=<?php echo $row['id_solicitacao']?>">Editar</a> | <a href="delete_request.php">Excluir</a></td>
+                    <td><a href="update_request.php?id=<?php echo $row['id_solicitacao']?>">Editar</a> | <a href="../backend/delete/delete_request.php?id=<?php echo $row['id_solicitacao']?>">Excluir</a></td>
                 </tr>
                 <?php
             }
+        } else{
+            echo "Não há Solicitações Abertas! 😉";
+            echo "<br>";
         }
         
         ?>
     </table>
+    <br>
+    <a href="index.html"><button>Voltar</button></a>
 </body>
 </html>

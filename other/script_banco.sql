@@ -20,7 +20,7 @@ CREATE TABLE funcionario(
 );
 
 CREATE TABLE solicitacao(
-	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id_solicitacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT NOT NULL,
     id_funcionario INT, 
     urgencia VARCHAR(5) NOT NULL,

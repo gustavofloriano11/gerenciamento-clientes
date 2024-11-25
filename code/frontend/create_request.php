@@ -42,9 +42,9 @@
             <label for="urgencia">Urgência:</label>
             <select name="urgencia">
                 <option value="null">Selecione uma Opção</option>
-                <option value="baixa">Baixa</option>
-                <option value="media">Média</option>
-                <option value="alta">Alta</option>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
             </select>
             <label for="status">Status:</label>
             <select name="status">
